@@ -3,10 +3,13 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Production builds
 /frontend/build/
 /frontend/dist/
+/backend/dist/
 
 # Environment variables
 .env
@@ -14,7 +17,9 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
+*.env
+frontend/.env
+backend/.env
 # Terraform
 *.tfstate
 *.tfstate.*
@@ -23,27 +28,44 @@ yarn-error.log*
 !terraform/environments/*/terraform.tfvars.example
 .terraform/
 .terraform.lock.hcl
+terraform.tfstate.d/
 
 # AWS
 .aws/
+*.zip
 
-# IDE
+# IDE y Editores
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
 # Logs
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Coverage
 coverage/
+*.lcov
 
 # Temporary files
 tmp/
 temp/
+.tmp/
+
+# Build artifacts
+dist/
+build/
